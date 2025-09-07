@@ -6,7 +6,11 @@ from fastapi.responses import JSONResponse
 
 app = FastAPI()
 
-@app.post("/swap-colour")
+@app.get("/")
+async def home():
+    return "hello"
+
+@app.post("/api/swap-colour")
 async def swap_colour(request: Request):
     data = await request.json()
     colour = data.get("colour")

@@ -10,7 +10,7 @@ export default function Home() {
   const handleSwap = async () => {
     setLoading(true);
     try {
-      const res = await fetch("/swap-colour", {
+  const res = await fetch("https://zina-two.vercel.app/api/swap-colour", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ colour }),
